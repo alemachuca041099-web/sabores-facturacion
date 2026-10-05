@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <title>Entrar · Facturación Sabores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0b0a09" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="/device-policy.js"></script>
+</head>
+<body class="login-body">
+  <section class="desktop-only" aria-labelledby="desktop-only-title">
+    <div class="login-card">
+      <svg class="emblem" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="10" width="48" height="32" rx="3"/><path d="M32 42v12M20 54h24"/></svg>
+      <p class="eyebrow">SABORES · FACTURACIÓN</p>
+      <h1 id="desktop-only-title">Solo disponible en computadora</h1>
+      <p class="muted">Para ingresar al panel y generar facturas, utiliza una PC o laptop con una ventana de al menos 768 píxeles de ancho. El panel no está disponible en teléfonos ni tabletas.</p>
+    </div>
+  </section>
+
+  <form class="login-card" method="post" action="/login">
+    <svg class="emblem" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M32 58V34" />
+      <path d="M32 34c0-8-6-12-14-12 0 8 6 14 14 12z" />
+      <path d="M32 34c0-8 6-12 14-12 0 8-6 14-14 12z" />
+      <path d="M32 24c0-6-4-10-10-10 0 6 4 11 10 10z" />
+      <path d="M32 24c0-6 4-10 10-10 0 6-4 11-10 10z" />
+      <path d="M32 16c0-4-3-8-6-9 0 5 2 9 6 9z" />
+    </svg>
+    <p class="eyebrow">SABORES</p>
+    <h1>Facturación</h1>
+    <p class="muted">Panel privado. Solo para quien captura ventas.</p>
+    <label>
+      Contraseña
+      <input type="password" name="password" autofocus required />
+    </label>
+    <p class="error" id="error" hidden>Contraseña incorrecta.</p>
+    <button class="btn primary" type="submit">Entrar</button>
+  </form>
+  <script>
+    if (new URLSearchParams(location.search).get('error')) {
+      document.getElementById('error').hidden = false;
+    }
+  </script>
+</body>
+</html>

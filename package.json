@@ -1,0 +1,20 @@
+{
+  "name": "sabores-facturacion",
+  "version": "1.0.0",
+  "description": "Panel privado para generar facturas (CFDI) de Restaurante Sabores vía Facturama",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/desktop-only.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.0",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "pdfkit": "^0.20.2"
+  }
+}
